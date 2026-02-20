@@ -1,0 +1,203 @@
+/* ─── Login Page ─── */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated BG Orbs */
+.login-page__bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.login-page__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  animation: float 20s ease-in-out infinite;
+}
+
+.login-page__orb--1 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent-start);
+  top: -10%;
+  left: -5%;
+  animation-delay: 0s;
+}
+
+.login-page__orb--2 {
+  width: 350px;
+  height: 350px;
+  background: var(--accent-end);
+  bottom: -10%;
+  right: -5%;
+  animation-delay: -7s;
+}
+
+.login-page__orb--3 {
+  width: 250px;
+  height: 250px;
+  background: #06b6d4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: -14s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -30px) scale(1.05); }
+  50% { transform: translate(-20px, 20px) scale(0.95); }
+  75% { transform: translate(20px, 10px) scale(1.02); }
+}
+
+/* Card */
+.login-card {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  background: rgba(19, 19, 26, 0.8);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-12, 48px) var(--space-10);
+  box-shadow: var(--shadow-lg);
+}
+
+.login-card__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-8);
+}
+
+.login-card__logo-text {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.login-card__title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.login-card__subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-8);
+}
+
+.login-card__success {
+  padding: var(--space-3) var(--space-4);
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: var(--radius-md);
+  color: #22c55e;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-4);
+}
+
+.login-card__error {
+  padding: var(--space-3) var(--space-4);
+  background: var(--danger-bg);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-md);
+  color: var(--danger);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-5);
+}
+
+/* Form */
+.login-card__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card__input-wrap {
+  position: relative;
+}
+
+.login-card__input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.login-card__input {
+  padding-left: 38px !important;
+  padding-right: 42px !important;
+}
+
+.login-card__toggle-pw {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  background: none;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.login-card__toggle-pw:hover {
+  color: var(--text-primary);
+}
+
+.login-card__submit {
+  width: 100%;
+  margin-top: var(--space-2);
+}
+
+.login-card__spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.login-card__toggle {
+  text-align: center;
+  margin-top: var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.login-card__toggle-btn {
+  background: none;
+  color: var(--text-accent);
+  font-weight: 500;
+  margin-left: var(--space-1);
+  transition: color var(--transition-fast);
+}
+
+.login-card__toggle-btn:hover {
+  color: var(--accent-start);
+}

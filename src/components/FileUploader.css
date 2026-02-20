@@ -1,0 +1,116 @@
+/* ─── File Uploader ─── */
+
+.file-uploader__dropzone {
+  border: 2px dashed var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  background: var(--bg-card);
+}
+
+.file-uploader__dropzone:hover {
+  border-color: var(--accent-start);
+  background: rgba(124, 58, 237, 0.03);
+}
+
+.file-uploader__dropzone--active {
+  border-color: var(--accent-start);
+  background: rgba(124, 58, 237, 0.06);
+  box-shadow: var(--shadow-glow);
+}
+
+.file-uploader__dropzone-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto var(--space-4);
+  border-radius: var(--radius-lg);
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--accent-start);
+}
+
+.file-uploader__dropzone-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.file-uploader__dropzone-hint {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-1);
+}
+
+.file-uploader__dropzone-formats {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* File List */
+.file-uploader__list {
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.file-uploader__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.file-uploader__item-icon {
+  color: var(--accent-start);
+  flex-shrink: 0;
+}
+
+.file-uploader__item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.file-uploader__item-name {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-uploader__item-size {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.file-uploader__item-done {
+  color: var(--success);
+  flex-shrink: 0;
+}
+
+.file-uploader__item-remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.file-uploader__item-remove:hover {
+  background: var(--danger-bg);
+  color: var(--danger);
+}

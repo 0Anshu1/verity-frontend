@@ -1,0 +1,35 @@
+/* ─── Risk Gauge ─── */
+
+.risk-gauge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.risk-gauge__content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.risk-gauge__score {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.risk-gauge__label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.risk-gauge__level {
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
